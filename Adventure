@@ -1,0 +1,19 @@
+import random
+import time
+print("Hello and welcome to the adventure game Beneath Nightmare Castle, written by Steve Jackson and Ian Livingstone.")
+Name = input("Before we get started lets get your character created, tell me what is your name?") 
+#Name = input("Name?")
+print ("Welcome ",Name," to the adventure of a lifetime. The next thing you will need to do is sort out your character stats. This will require dice rolls which we will do within the game.")
+#Health
+def skillroll():
+	skillroll=""
+	while skillroll !="Y" and skillroll != "N":
+		skillroll = input("First we need to roll for your skill, would you like me to roll? Y/N")
+	return skillroll
+	if skillroll=="Y"
+	print("Rolling the dice..")
+	time.sleep(2)
+	print("I rolled a", random.randint(1,6))
+	
+	
+skillroll()
