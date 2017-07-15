@@ -4,7 +4,6 @@ print("Hello and welcome to the adventure game Beneath Nightmare Castle, written
 Name = input("Before we get started lets get your character created, tell me what is your name?") 
 #Name = input("Name?")
 print ("Welcome ",Name," to the adventure of a lifetime. The next thing you will need to do is sort out your character stats. This will require dice rolls which we will do within the game.")
-#Health
 def skillroll():
 	skillroll=""
 	while skillroll !="Y" and skillroll != "N":
@@ -12,8 +11,35 @@ def skillroll():
 	
 	if skillroll=="Y":
 		print("Rolling the dice..")
+		skill=random.randint(1,6)
 		time.sleep(2)
-		print("I rolled a", random.randint(1,6), " I will now add 6 to this so your skill is")
+		print("I rolled a", skill, " I will now add 6 to this so your skill is", skill+6)
+		skill=skill+6
 	return skillroll
-	
+
+def staminaroll():
+		staminaroll=""
+		while staminaroll !="Y" and staminaroll !="N":
+			staminaroll = input("Ok next is your characters stamina, this will require two dice, would you like me to roll? Y/N")
+		
+		if staminaroll=="Y":
+			print("Rolling the dices..")
+			x=random.randint(1,6)
+			y=random.randint(1,6)
+			time.sleep(2)
+			print("Ok I have rolled an ",x,"and a ",y," Now I will add 12 so your stamina is going to be ", x+y+12)
+		return staminaroll
+def luckroll():
+		luckroll=""
+		while luckroll !="Y" and luckroll !="N":
+			luckroll = input("Next is your luck would you like me to roll? Y/N")
+		
+		if luckroll=="Y":
+			print("Rolling the dice..")
+			x=random.randint(1,6)
+			time.sleep(2)
+			print("Ok I have rolled an ",x," now I will add 6 so your luck is ", x+6)
+		return luckroll
 skillroll()
+staminaroll()
+luckroll()	
