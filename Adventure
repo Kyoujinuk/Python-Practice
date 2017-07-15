@@ -9,11 +9,11 @@ def skillroll():
 	skillroll=""
 	while skillroll !="Y" and skillroll != "N":
 		skillroll = input("First we need to roll for your skill, would you like me to roll? Y/N")
-	return skillroll
-	if skillroll=="Y"
-	print("Rolling the dice..")
-	time.sleep(2)
-	print("I rolled a", random.randint(1,6))
 	
+	if skillroll=="Y":
+		print("Rolling the dice..")
+		time.sleep(2)
+		print("I rolled a", random.randint(1,6), " I will now add 6 to this so your skill is")
+	return skillroll
 	
 skillroll()
