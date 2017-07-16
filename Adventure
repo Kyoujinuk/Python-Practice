@@ -1,9 +1,11 @@
 import random
 import time
 print("Hello and welcome to the adventure game Beneath Nightmare Castle, written by Steve Jackson and Ian Livingstone.")
+print()
 Name = input("Before we get started lets get your character created, tell me what is your name?") 
-#Name = input("Name?")
+print()
 print ("Welcome ",Name," to the adventure of a lifetime. The next thing you will need to do is sort out your character stats. This will require dice rolls which we will do within the game.")
+print()
 def skillroll():
 	skillroll=""
 	while skillroll !="Y" and skillroll != "N":
@@ -15,6 +17,7 @@ def skillroll():
 		time.sleep(2)
 		print("I rolled a", skill, " I will now add 6 to this so your skill is", skill+6)
 		skill=skill+6
+		print()
 	return skillroll
 
 def staminaroll():
@@ -28,6 +31,7 @@ def staminaroll():
 			y=random.randint(1,6)
 			time.sleep(2)
 			print("Ok I have rolled an ",x,"and a ",y," Now I will add 12 so your stamina is going to be ", x+y+12)
+			print()
 		return staminaroll
 def luckroll():
 		luckroll=""
@@ -39,7 +43,106 @@ def luckroll():
 			x=random.randint(1,6)
 			time.sleep(2)
 			print("Ok I have rolled an ",x," now I will add 6 so your luck is ", x+6)
+			print()
 		return luckroll
+
+def willroll():
+		willroll=""
+		while willroll !="Y" and willroll !="N":
+			willroll = input("Finally let's roll for your willpower, would you like me to roll? Y/N")
+			
+		if willroll=='Y':
+			print("Rolling the dice..")
+			x=random.randint(1,6)
+			time.sleep(2)
+			print("Ok I have rolled a",x," now I will add 6 to it so your willpower is ",x+6)
+			print()
+		return willroll
+
+def gameover():
+		gameover=""
+		while gameover !="yes" and gameover !="no":
+			gameover = input("Game Over, do you want to try again? yes or no")
+		
+		if gameover=='yes':
+			skillroll()
+		elif gameover=="no":
+			print("Thanks for playing")
+		return gameover
 skillroll()
 staminaroll()
 luckroll()	
+willroll()
+
+def stats():
+	print("Ok so your skill is. Your stamina is. Your luck is. and your will power is.")
+	print("The only equipment is a sword, backpack and armour, are you ready to begin, well here we go.")
+	print()
+	print()
+	print()
+	time.sleep(5)
+stats()
+
+print("Captured! Netted, strund up and helpless! You curse yourself for an inattentive fool")
+print()
+print(" So much for the peace and quiet of civilization! It was day dreaming about the comforts of home that got you into this mess.")
+print("But even the hardiest adventurer can tire of life in the wilderness and begin to yearn for a soft bed, and it was difficult to think of")
+print("anything else as you trudged to the summit of the last of the foothill and glimpsed the town of Neaburg basking in the afternoon sun.")
+print()
+time.sleep(8)
+print("You know Neaburg; you have been here once before. It is not a large settlement, but you remember it as peaceful and prosperous.") 
+print("The black battlements of the Keep of Neuburg seem to loom threateningly over the little town; but Baron Tholdur, the margrave")
+print("of Neuburg keep, is an old friend of yours.")
+print("He is more than a friend, in fact - he is a comrade-in-arms. The two of youmfought side by side at the Battle of Helm Hill, a renowened victory")
+print("which has, so far, prevented any further incursions by the Southerners of the steppes.")
+print("You had been looking forward to seeing the old warrior again; and instead you have let yourself be caught by a band of those very same southern barbarians.")
+print()
+time.sleep(8)
+print("Nearing the end of a hard trek down from the mountains, with the roof-tops of Neuburg in sight and your head filled with thoughts of a hearty meal,")
+print("you failed to notice the warning signs. The bushes at the side of the trail rustled - and not quite at the same time as the wind gusted across the hills.")
+print("Bird-song broke out as you approached a solitary tree, and you should have noticed that it was not entirely like any bird-song you had heard before.")
+print("At any other time you would have stopped and looked around before stepping under that overhanging branch - it was such an obvious place for a trap.")
+print()
+time.sleep(8)
+print("And then the ground gave way beneath your feet. Voices shouted in an unfamiliar tongue. You struggled, but could hardly move. And here you are.")
+print("It's dark: you're in a pit. The ropes about you are pulled tighter. You move upwards, out into the light. You are in a net, hanging from a branch,")
+print("and you are surrounded by silent swordsmen swathed in flowing robes. As you spin slowly, their glittering eyes and gleaming blades seem to circle you.")
+print("You glimpse the lowering shape of Neuburg keep, and then something very heavy hits the back of your head. Pain...flashing lights - you lose all consciousness...")
+time.sleep(8)
+print()
+print()
+print("You wake. A particularly insistent Dwarf blacksmith seems to be using your head as an anvil. Your hands and feet are tightly bound, and a blindfold covers your eyes.")
+print("You cannot move, you cannot see, and you can hear only distant sounds.")
+print()
+time.sleep(3)
+print("Time passes. The pain in your head subsides to a dull throb. Nothing else happens. Then you hear a voice, an urgent whisper: 'My friend! Hush! Say nothing! I have a sharp knife,")
+print("but I dare not stay long. I cannot enter through this small space; you must pull yourself a little to your right and I will sever the bonds. Hurry!")
+print()
+def choiceone():
+		choiceone=""
+		while choiceone !="yes" and choiceone!="no":
+			choiceone = input ("Do you trust this unknown voice and shuffle nearer in the hope that your ropes will be cut? yes or no")
+	
+		if choiceone=="yes":
+			print("You shuffle awkwardly to the right, encouraged by the mysterious voice: ' That's right my friend, that's right, just a little further now, but please hurry: I dare not be found here. I am in mortal fear for my life,")
+			print("but perhaps you are the one we've been expecting, and I cannot let those Southerners take you. That's it, that's it; I have your ropes now - so!' And you feel your bonds falling from your wrists.")
+			print()
+			print("You tear off your blindfold and wrench the ropes from your ankles.")
+			time.sleep(1)
+			print("You are in a cellar; a little light enters from an open door at the top of a steep flight of narrow stairs. Of your rescuer there is no sign. There appears to be no other door.")
+		elif choiceone=='no':
+			print()
+			print("The mysterious voice implores you to move so that your bonds can be cut, but you remain motionless. Eventually you hear 'I must go now. It is dark, and I fear for my life,")
+			print("They will return soon and take you. May Oiden be with you stranger.'")
+			print()
+			print("A little later you hear footsteps approaching, Rough hands pick you up, carry  you up some stairs and throw you what seems to be a cart, Almost as an afterthought, your captors club you into unconsciousness")
+			time.sleep(3)
+			print("You wake up in a cavernous, valted dungeon. You are spreadeagled on a cold stone slab. There are manacles around your limbs and tight straps across your body. All you can do is watch the wildly dancing shadows cast")
+			print("by the light of flaring cressets.")
+			print()
+			print("Eventually, your solitary confinement ends. A crowd of silent, barely human forms enter the chamber. Their hideous deformities are so repellent that you cry out in disgust.")
+			print("They are carrying a selection of very sharp knives. They kill you slowly, and take ecstatic pleasure in your agonized writhings. You go completley insane before you die.")
+			gameover()
+		return choiceone
+
+choiceone()
