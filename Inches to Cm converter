@@ -1,0 +1,19 @@
+def convert():
+    Convert=""
+    #while Convert !=
+    Convert = float(input('Please enter inches to convert to centermeters: '))
+    answer = Convert * 2.54
+    print('This measurement is', answer,'cm')
+    ask=""
+    while ask !='Y' and ask !='N': 
+        ask=input('Do you want to find another one out? ')
+
+    if ask =='Y':
+        convert()
+    else:
+        ask =='N'
+        print('Thank you goodbye')
+        
+    return convert
+
+convert()
